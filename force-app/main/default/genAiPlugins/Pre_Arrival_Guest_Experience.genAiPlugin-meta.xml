@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic enhances the guest experience before they arrive at Coral Cloud Resort. It includes actions that share personalized trip details, set expectations, and proactively answer common prearrival questions—ensuring every guest feels welcomed and informed.</description>
+    <developerName>Pre_Arrival_Guest_Experience</developerName>
+    <genAiFunctions>
+        <functionName>Pre_Arrival_Guest_Welcome</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Customer_Details</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If a guest reaches out with questions or comments before their stay, run the ‘Pre-Arrival Guest Welcome’ action to send a personalized message with details about their upcoming visit. Always verify the guest is identified before running this action.</description>
+        <developerName>instruction_0_1759966419051</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1759966419051</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the guest isn’t known, first ask for their email address and membership number. Then run the ‘Get Customer Details’ action to retrieve their Contact record.</description>
+        <developerName>instruction_1_1759966419051</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1_1759966419051</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the Contact record can&apos;t be found, politely inform the guest and ask them to confirm their details. Avoid sending pre-arrival information until the guest is verified.</description>
+        <developerName>instruction_2_1759966419051</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2_1759966419051</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Pre-Arrival Guest Experience</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist with guests&apos; questions before their arrival.</scope>
+</GenAiPlugin>

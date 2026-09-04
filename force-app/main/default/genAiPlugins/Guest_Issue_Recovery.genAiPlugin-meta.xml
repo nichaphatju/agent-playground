@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Handles guest issues by providing personalized recovery options based on an open case.</description>
+    <developerName>Guest_Issue_Recovery</developerName>
+    <genAiFunctions>
+        <functionName>Get_Customer_Details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Guest_Experience_Compensation</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If a guest sends a negative message about the resort experience or event, run the ’Guest Experience Compensation’ action. Always ensure you know the customer before running this action. If the response returns saying that a case does not exist, inform the user and provide an empathetic response to the guest’s concerns.</description>
+        <developerName>instruction_0_1759966515566</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1759966515566</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer is not known, you must always ask for their email address and their membership number to get their Contact record by running the action ’Get Customer Details’ before running any other actions.</description>
+        <developerName>instruction_1_1759966515566</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1_1759966515566</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Guest Issue Recovery</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist in resolving guest issues by offering tailored recovery options based on the details of open cases.</scope>
+</GenAiPlugin>
